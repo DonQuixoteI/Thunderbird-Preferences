@@ -1,1 +1,1 @@
-# Thunderbird-Preferences
+# Thunderbird Preferences
