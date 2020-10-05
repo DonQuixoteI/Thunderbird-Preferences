@@ -2,6 +2,8 @@
 
 - [Maildir](#maildir)
 - [Global Search](#global-search)
+- [Web Beacon](#web-beacon)
+
 
 ## Maildir
 
@@ -36,4 +38,15 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
 
 
+## Web Beacon
+
+```js
+user_pref("beacon.enabled", false);
+```
+
+> A web beacon is an object embedded in a web page or email, which unobtrusively (usually invisibly) allows checking that a user has accessed the content. Common uses are email tracking and page tagging for web analytics.
+[[Wikipedia](https://en.wikipedia.org/wiki/Web_beacon)]
+
+> Example use cases of the Beacon API are logging activity and sending analytics data to the server.
+[[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)]
 
