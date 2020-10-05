@@ -31,7 +31,7 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 `Preferences` > `General` > `Enable Global Search and Indexer`: `ON`
 
 > Global search queries all of your messages, regardless of the account the message is associated with or the folder where the message is stored.
-[[Global Search - Thunderbird Help](https://support.mozilla.org/en-US/kb/global-search)]
+[[Thunderbird Help](https://support.mozilla.org/en-US/kb/global-search)]
 
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
 
