@@ -65,7 +65,7 @@ Options of `html_as`:\
 `0` (default) - display HTML normally,\
 `1` - convert HTML to text and then back again,\
 `2` - display HTML source,\
-`3` - sanitize HTML\
+`3` - sanitize HTML,\
 `4` - display all body parts.
 
 [[HTML Sanitizer - Ben Bucksch](https://www.bucksch.org/1/projects/mozilla/108153/)]
