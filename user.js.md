@@ -8,6 +8,7 @@
   - [Show User Agent](#show-user-agent)
 - [Hardening Thunderbird](#hardening-thunderbird)
   - [Display HTML](#display-html)
+  - [Inline Attachments](#inline-attachments)
   - [Web Beacon](#web-beacon)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
@@ -119,6 +120,20 @@ Simple HTML = `prefer_plaintext`:`false` + `disallow_mime_handlers`:>=`1` + `htm
 Plain Text = `prefer_plaintext`:`true`
 
 Note: applying `html_as` to `1` doesn't change the status of menu items "Original HTML / Simple HTML / Plain Text" and none of them is selected after restart of Thunderbird.
+
+
+### Inline Attachments
+
+```js
+user_pref("mail.inline_attachments", false);
+```
+
+> `true` - show inlinable attachments (text, images, messages) after the message,\
+`false` - do not display any attachments with the message.
+[[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
+
+The option should be set to `false` in order to avoid automatic opening dangerous attachments during reading emails.
+[[Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm)] (in German)
 
 
 ### Web Beacon
