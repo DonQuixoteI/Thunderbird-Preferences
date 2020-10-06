@@ -4,6 +4,9 @@
 - [Global Search](#global-search)
 - [Display HTML](#display-html)
 - [Web Beacon](#web-beacon)
+- [Telemetry](#telemetry)
+  - [Health Report](#health-report)
+  - [Data Submission](#data-submission)
 
 
 ## Maildir
@@ -93,3 +96,31 @@ user_pref("beacon.enabled", false);
 > Example use cases of the Beacon API are logging activity and sending analytics data to the server.
 [[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)]
 
+
+## Telemetry
+
+> The Telemetry feature provides this capability by sending performance and usage info to Mozilla. Telemetry measures and collects non-personal information, such as performance, hardware, usage and customizations. It then sends this information to Mozilla on a daily basis.
+[[mozilla wiki](https://wiki.mozilla.org/Telemetry)]
+
+[Telemetry - Firefox Source Docs](https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/index.html)
+
+[Telemetry - Firefox Data Documentation](https://docs.telemetry.mozilla.org/)
+
+
+### Health Report
+
+[Health Report (Firefox)](https://github.com/DonQuixoteI/Firefox-UserGuide/blob/master/doc/user.js.md#health-report)
+
+```js
+user_pref("datareporting.healthreport.uploadEnabled", false);
+```
+
+
+### Data Submission
+
+```js
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+```
+
+> This is the data submission master kill switch. If disabled, no policy is shown or upload takes place, ever.
+[[Mozilla Source Tree Docs](https://firefox-source-docs.mozilla.org/main/65.0/toolkit/components/telemetry/telemetry/internals/preferences.html)]
