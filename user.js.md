@@ -1,20 +1,26 @@
 # Thunderbird user.js
 
-- [Maildir](#maildir)
-- [Global Search](#global-search)
-- [Display HTML](#display-html)
-- [Condensed Addresses](#condensed-addresses)
-- [Web Beacon](#web-beacon)
-- [Telemetry](#telemetry)
-  - [Health Report](#health-report)
-  - [Data Submission](#data-submission)
-- [Crash Reports](#crash-reports)
-- [Privacy](#privacy)
-  - [Your IP Address](#your-ip-address)
-  - [Your User Agent](#your-user-agent)
+- [Setup](#setup)
+  - [Maildir](#maildir)
+  - [Global Search](#global-search)
+- [Appearance](#appearance)
+  - [Condensed Addresses](#condensed-addresses)
+  - [Show User Agent](#show-user-agent)
+- [Hardening Thunderbird](#hardening-thunderbird)
+  - [Display HTML](#display-html)
+  - [Web Beacon](#web-beacon)
+  - [Telemetry](#telemetry)
+    - [Health Report](#health-report)
+    - [Data Submission](#data-submission)
+  - [Crash Reports](#crash-reports)
+  - [Privacy](#privacy)
+    - [Your IP Address](#your-ip-address)
+    - [Your User Agent](#your-user-agent)
 
 
-## Maildir
+## Setup
+
+### Maildir
 
 > Optional support for [Maildir](https://en.wikipedia.org/wiki/Maildir) allows a single unique file per email (using the [EML](https://www.loc.gov/preservation/digital/formats/fdd/fdd000388.shtml) data format), unlike the default monolithic single file format of one file per folder known as [mbox](https://en.wikipedia.org/wiki/Mbox).
 [[Thunderbird Help](https://support.mozilla.org/en-US/kb/maildir-thunderbird)]
@@ -31,7 +37,7 @@ Or `Preferences` > `General` > `Message Store Type for new account`: `File per m
 [[Thunderbird Help](https://support.mozilla.org/en-US/kb/maildir-thunderbird)]
 
 
-## Global Search
+### Global Search
 
 ```js
 user_pref("mailnews.database.global.indexer.enabled", true);
@@ -47,7 +53,33 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
 
 
-## Display HTML
+## Appearance
+
+### Condensed Addresses
+
+```js
+user_pref("mail.showCondensedAddresses", false);
+```
+
+> `true` (default) - show just the display name for people in the address book,\
+`false` - show both the email address and display name.
+[[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
+
+
+### Show User Agent
+
+To show User-Agent header in message pane:
+
+```js
+user_pref("mailnews.headers.showUserAgent", true);
+```
+
+`false` by default [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)].
+
+
+## Hardening Thunderbird
+
+### Display HTML
 
 ```js
 user_pref("mailnews.display.prefer_plaintext", false);
@@ -89,18 +121,7 @@ Plain Text = `prefer_plaintext`:`true`
 Note: applying `html_as` to `1` doesn't change the status of menu items "Original HTML / Simple HTML / Plain Text" and none of them is selected after restart of Thunderbird.
 
 
-## Condensed Addresses
-
-```js
-user_pref("mail.showCondensedAddresses", false);
-```
-
-> `true` (default) - show just the display name for people in the address book,\
-`false` - show both the email address and display name.
-[[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
-
-
-## Web Beacon
+### Web Beacon
 
 ```js
 user_pref("beacon.enabled", false);
@@ -113,7 +134,7 @@ user_pref("beacon.enabled", false);
 [[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)]
 
 
-## Telemetry
+### Telemetry
 
 > The Telemetry feature provides this capability by sending performance and usage info to Mozilla. Telemetry measures and collects non-personal information, such as performance, hardware, usage and customizations. It then sends this information to Mozilla on a daily basis.
 [[mozilla wiki](https://wiki.mozilla.org/Telemetry)]
@@ -123,7 +144,7 @@ user_pref("beacon.enabled", false);
 [Telemetry - Firefox Data Documentation](https://docs.telemetry.mozilla.org/)
 
 
-### Health Report
+#### Health Report
 
 [Health Report (Firefox)](https://github.com/DonQuixoteI/Firefox-UserGuide/blob/master/doc/user.js.md#health-report)
 
@@ -132,7 +153,7 @@ user_pref("datareporting.healthreport.uploadEnabled", false);
 ```
 
 
-### Data Submission
+#### Data Submission
 
 ```js
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
@@ -142,7 +163,7 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 [[Mozilla Source Tree Docs](https://firefox-source-docs.mozilla.org/main/65.0/toolkit/components/telemetry/telemetry/internals/preferences.html)]
 
 
-## Crash Reports
+### Crash Reports
 
 ```js
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", true);
@@ -167,9 +188,9 @@ Submitted crash reports are listed in
 [Mozilla Crash Reporter TB - Thunderbird Help](https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb)
 
 
-## Privacy
+### Privacy
 
-### Your IP Address
+#### Your IP Address
 
 ```js
 user_pref("mail.smtpserver.default.hello_argument", "localhost");
@@ -179,7 +200,7 @@ user_pref("mail.smtpserver.default.hello_argument", "localhost");
 [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
 
 
-### Your User Agent
+#### Your User Agent
 
 The [User-Agent](https://en.wikipedia.org/wiki/User_agent) string includes the following details:\
 `Mozilla/[version] ([system and browser information]) [platform] ([platform details]) [extensions]`.
@@ -193,10 +214,4 @@ user_pref("general.useragent.override", "");
 
 [User-Agent - Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31f.htm) (in German)
 
-To show User-Agent header in message pane:
-
-```js
-user_pref("mailnews.headers.showUserAgent", true);
-```
-
-`false` by default [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)].
+To view the User Agent, see [how to show them](#show-user-agent).
