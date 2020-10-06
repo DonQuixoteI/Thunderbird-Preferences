@@ -3,6 +3,7 @@
 - [Maildir](#maildir)
 - [Global Search](#global-search)
 - [Display HTML](#display-html)
+- [Condensed Addresses](#condensed-addresses)
 - [Web Beacon](#web-beacon)
 - [Telemetry](#telemetry)
   - [Health Report](#health-report)
@@ -86,6 +87,17 @@ Simple HTML = `prefer_plaintext`:`false` + `disallow_mime_handlers`:>=`1` + `htm
 Plain Text = `prefer_plaintext`:`true`
 
 Note: applying `html_as` to `1` doesn't change the status of menu items "Original HTML / Simple HTML / Plain Text" and none of them is selected after restart of Thunderbird.
+
+
+## Condensed Addresses
+
+```js
+user_pref("mail.showCondensedAddresses", false);
+```
+
+> `true` (default) - show just the display name for people in the address book,\
+`false` - show both the email address and display name.
+[[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
 
 
 ## Web Beacon
