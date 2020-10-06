@@ -7,6 +7,7 @@
 - [Telemetry](#telemetry)
   - [Health Report](#health-report)
   - [Data Submission](#data-submission)
+- [Crash Reports](#crash-reports)
 
 
 ## Maildir
@@ -124,3 +125,28 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 
 > This is the data submission master kill switch. If disabled, no policy is shown or upload takes place, ever.
 [[Mozilla Source Tree Docs](https://firefox-source-docs.mozilla.org/main/65.0/toolkit/components/telemetry/telemetry/internals/preferences.html)]
+
+
+## Crash Reports
+
+```js
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", true);
+```
+
+Default:
+	n/a
+
+`true` if
+`Preferences` > `Privacy & Security` > `Allow Thunderbird to send backlogged crash reports on your behalf`: `ON`
+
+```js
+user_pref("breakpad.reportURL", "");
+```
+
+Default:
+	"https://crash-stats.mozilla.com/report/index/"
+
+Submitted crash reports are listed in
+`Help` > `Troubleshooting Information`
+
+[Mozilla Crash Reporter TB - Thunderbird Help](https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb)

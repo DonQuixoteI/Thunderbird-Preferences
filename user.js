@@ -1,4 +1,5 @@
 user_pref("beacon.enabled", false);
+user_pref("breakpad.reportURL", "");
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("mail.serverDefaultStoreContractID", "@mozilla.org/msgstore/maildirstore;1")
