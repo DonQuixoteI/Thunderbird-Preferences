@@ -10,6 +10,7 @@
 - [Crash Reports](#crash-reports)
 - [Privacy](#privacy)
   - [Your IP Address](#your-ip-address)
+  - [Your User Agent](#your-user-agent)
 
 
 ## Maildir
@@ -164,3 +165,26 @@ user_pref("mail.smtpserver.default.hello_argument", "localhost");
 
 > Lets you replace your IP address with the specified string in Received: headers when your IP address is not a "fully qualified domain name" (FQDN). Typically you only need to do this when you have a NAT box to prevent it from using the NAT boxes IP address. If you don't set it to something in your SMTP server's domain it may increase your spam score.
 [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
+
+
+### Your User Agent
+
+The [User-Agent](https://en.wikipedia.org/wiki/User_agent) string includes the following details:\
+`Mozilla/[version] ([system and browser information]) [platform] ([platform details]) [extensions]`.
+
+For example,\
+`Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Thunderbird/68.10.0`
+
+```js
+user_pref("general.useragent.override", "");
+```
+
+[User-Agent - Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31f.htm) (in German)
+
+To show User-Agent header in message pane:
+
+```js
+user_pref("mailnews.headers.showUserAgent", true);
+```
+
+`false` by default [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)].
