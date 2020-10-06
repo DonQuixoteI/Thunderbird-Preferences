@@ -2,6 +2,7 @@
 
 - [Maildir](#maildir)
 - [Global Search](#global-search)
+- [Display HTML](#display-html)
 - [Web Beacon](#web-beacon)
 
 
@@ -36,6 +37,48 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 [[Thunderbird Help](https://support.mozilla.org/en-US/kb/global-search)]
 
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
+
+
+## Display HTML
+
+```js
+user_pref("mailnews.display.prefer_plaintext", false);
+user_pref("mailnews.display.disallow_mime_handlers", 3);
+user_pref("mailnews.display.html_as", 1);
+
+```
+
+Convert HTML, inline images and some other uncommon types to text and then back to HTML again.
+
+Options of `prefer_plaintext`:\
+`false` (default) - display a message as HTML when there is both a HTML and a plain text version of a message body,\
+`true` - display a message as plain text when ...
+
+Options of `disallow_mime_handlers`:\
+`0` (default) - all classes can process incoming data,\
+`1` - use hard-coded blacklist to avoid rendering HTML,\
+`2` - ... and inline images,\
+`3` - ... and some other uncommon types,\
+`100` - use hard-coded whitelist.
+
+Options of `html_as`:\
+`0` (default) - display HTML normally,\
+`1` - convert HTML to text and then back again,\
+`2` - display HTML source,\
+`3` - sanitize HTML\
+`4` - display all body parts.
+
+[[HTML Sanitizer - Ben Bucksch](https://www.bucksch.org/1/projects/mozilla/108153/)]
+
+[[Mail and news settings - mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
+
+Original HTML = `prefer_plaintext`:`false` + `disallow_mime_handlers`:`0` + `html_as`:`0`
+
+Simple HTML = `prefer_plaintext`:`false` + `disallow_mime_handlers`:>=`1` + `html_as`:`3`
+
+Plain Text = `prefer_plaintext`:`true`
+
+Note: applying `html_as` to `1` doesn't change the status of menu items "Original HTML / Simple HTML / Plain Text" and none of them is selected after restart of Thunderbird.
 
 
 ## Web Beacon
