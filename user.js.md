@@ -8,6 +8,8 @@
   - [Health Report](#health-report)
   - [Data Submission](#data-submission)
 - [Crash Reports](#crash-reports)
+- [Privacy](#privacy)
+  - [Your IP Address](#your-ip-address)
 
 
 ## Maildir
@@ -150,3 +152,15 @@ Submitted crash reports are listed in
 `Help` > `Troubleshooting Information`
 
 [Mozilla Crash Reporter TB - Thunderbird Help](https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb)
+
+
+## Privacy
+
+### Your IP Address
+
+```js
+user_pref("mail.smtpserver.default.hello_argument", "localhost");
+```
+
+> Lets you replace your IP address with the specified string in Received: headers when your IP address is not a "fully qualified domain name" (FQDN). Typically you only need to do this when you have a NAT box to prevent it from using the NAT boxes IP address. If you don't set it to something in your SMTP server's domain it may increase your spam score.
+[[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)]
