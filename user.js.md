@@ -11,6 +11,7 @@
   - [Inline Attachments](#inline-attachments)
   - [Remote Content](#remote-content)
   - [Web Beacon](#web-beacon)
+  - [Cookies](#cookies)
   - [JavaScript](#javascript)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
@@ -165,6 +166,25 @@ user_pref("beacon.enabled", false);
 [[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)]
 
 
+### Cookies
+
+```js
+user_pref("network.cookie.cookieBehavior", 2);
+```
+
+`0` (default) - accept all cookies,
+`1` - only accept from the originating site (block third-party cookies),
+`2` - block all cookies,
+`3` - block third-party cookies from unvisited sites,
+`4` - block cookies from trackers.
+
+[Cookies Preferences in Mozilla - MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Cookies_Preferences)
+
+`Preferences` > `Privacy & Security` > `Accept cookies from sites`: `OFF`
+
+Note: [CardBook](https://addons.thunderbird.net/en-US/thunderbird/addon/cardbook/) extension changes `cookieBehavior` to `1`.
+
+
 ### JavaScript
 
 ```js
@@ -173,7 +193,7 @@ user_pref("javascript.enabled", false);
 
 > JavaScript is disabled for message content but not for RSS news feeds.
 [[ArchWiki](https://wiki.archlinux.org/index.php/thunderbird),
-[MDN web docs](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3#JavaScript)]
+[MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3#JavaScript)]
 
 
 ### Telemetry
