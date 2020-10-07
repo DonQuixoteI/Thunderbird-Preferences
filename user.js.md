@@ -9,6 +9,7 @@
 - [Hardening Thunderbird](#hardening-thunderbird)
   - [Display HTML](#display-html)
   - [Inline Attachments](#inline-attachments)
+  - [Remote Content](#remote-content)
   - [Web Beacon](#web-beacon)
   - [JavaScript](#javascript)
   - [Telemetry](#telemetry)
@@ -135,6 +136,20 @@ user_pref("mail.inline_attachments", false);
 
 The option should be set to `false` in order to avoid automatic opening dangerous attachments during reading emails.
 [[Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm)] (in German)
+
+
+### Remote Content
+
+> Email messages can contain remote content such as images or stylesheets. To protect your privacy, Thunderbird does not load remote content automatically, but instead shows a notification bar to indicate that it blocked remote content.
+[[Thunderbird Help](https://support.mozilla.org/en-US/kb/remote-content-in-messages)]
+
+```js
+user_pref("mailnews.message_display.disable_remote_image", true);
+```
+
+`true` by default.
+
+`Preferences` > `Privacy & Security` > `Allow remote content in messages`: `OFF`
 
 
 ### Web Beacon
