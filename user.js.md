@@ -6,6 +6,7 @@
 - [Appearance](#appearance)
   - [Condensed Addresses](#condensed-addresses)
   - [Show User Agent](#show-user-agent)
+  - [Show Sender](#show-sender)
 - [Hardening Thunderbird](#hardening-thunderbird)
   - [Display HTML](#display-html)
   - [Inline Attachments](#inline-attachments)
@@ -79,6 +80,20 @@ user_pref("mailnews.headers.showUserAgent", true);
 ```
 
 `false` by default [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)].
+
+
+### Show Sender
+
+To show Sender header in message pane:
+
+```js
+user_pref("mailnews.headers.showSender", true);
+```
+
+`false` by default.
+
+> `Sender:` Address of the sender acting on behalf of the author listed in the `From:` field (secretary, list manager, etc.).
+[[Wikipedia](https://en.wikipedia.org/wiki/Email#Message_header)]
 
 
 ## Hardening Thunderbird

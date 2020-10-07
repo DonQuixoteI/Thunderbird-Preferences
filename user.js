@@ -9,6 +9,7 @@ user_pref("mail.serverDefaultStoreContractID", "@mozilla.org/msgstore/maildirsto
 user_pref("mail.showCondensedAddresses", false);
 user_pref("mail.smtpserver.default.hello_argument", "localhost");
 user_pref("mailnews.display.disallow_mime_handlers", 3);
+user_pref("mailnews.headers.showSender", true);
 user_pref("mailnews.headers.showUserAgent", true);
 user_pref("mailnews.display.html_as", 1);
 user_pref("network.cookie.cookieBehavior", 2);
