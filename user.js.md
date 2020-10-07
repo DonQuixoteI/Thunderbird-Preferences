@@ -10,6 +10,7 @@
   - [Display HTML](#display-html)
   - [Inline Attachments](#inline-attachments)
   - [Web Beacon](#web-beacon)
+  - [JavaScript](#javascript)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
     - [Data Submission](#data-submission)
@@ -147,6 +148,17 @@ user_pref("beacon.enabled", false);
 
 > Example use cases of the Beacon API are logging activity and sending analytics data to the server.
 [[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)]
+
+
+### JavaScript
+
+```js
+user_pref("javascript.enabled", false);
+```
+
+> JavaScript is disabled for message content but not for RSS news feeds.
+[[ArchWiki](https://wiki.archlinux.org/index.php/thunderbird),
+[MDN web docs](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3#JavaScript)]
 
 
 ### Telemetry

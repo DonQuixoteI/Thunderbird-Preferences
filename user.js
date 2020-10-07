@@ -2,6 +2,7 @@ user_pref("beacon.enabled", false);
 user_pref("breakpad.reportURL", "");
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("javascript.enabled", false);
 user_pref("general.useragent.override", "");
 user_pref("mail.inline_attachments", false);
 user_pref("mail.serverDefaultStoreContractID", "@mozilla.org/msgstore/maildirstore;1")
