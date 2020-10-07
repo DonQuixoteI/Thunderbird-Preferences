@@ -79,7 +79,7 @@ To show User-Agent header in message pane:
 user_pref("mailnews.headers.showUserAgent", true);
 ```
 
-`false` by default [[mozillaZine](http://kb.mozillazine.org/Mail_and_news_settings)].
+By default Thunderbird is sending information about your OS and version of your E-mail client included into the User Agent. To prevent sending User-Agent info, see [Your User Agent](#your-user-agent).
 
 
 ### Show Sender
