@@ -13,4 +13,5 @@ user_pref("mailnews.headers.showSender", true);
 user_pref("mailnews.headers.showUserAgent", true);
 user_pref("mailnews.display.html_as", 1);
 user_pref("network.cookie.cookieBehavior", 2);
+user_pref("network.http.sendRefererHeader", 0);
 

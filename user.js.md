@@ -14,6 +14,7 @@
   - [Web Beacon](#web-beacon)
   - [Cookies](#cookies)
   - [JavaScript](#javascript)
+  - [Send Referer](#send-referer)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
     - [Data Submission](#data-submission)
@@ -209,6 +210,21 @@ user_pref("javascript.enabled", false);
 > JavaScript is disabled for message content but not for RSS news feeds.
 [[ArchWiki](https://wiki.archlinux.org/index.php/thunderbird),
 [MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3#JavaScript)]
+
+
+### Send Referer
+
+```js
+user_pref("network.http.sendRefererHeader", 0);
+```
+
+> Controls whether or not to send a referrer regardless of origin.\
+`0` - never send the Referer header,\
+`1` - send the Referer when clicking on a link,\
+`2` (default) - send the Referer header when clicking on a link or loading an image.
+[[mozillaZine](http://kb.mozillazine.org/Network.http.sendRefererHeader), [mozilla wiki](https://wiki.mozilla.org/Security/Referrer)].
+
+[Improve online privacy by controlling referrer information - gHacks Tech News](https://www.ghacks.net/2015/01/22/improve-online-privacy-by-controlling-referrer-information/)
 
 
 ### Telemetry
