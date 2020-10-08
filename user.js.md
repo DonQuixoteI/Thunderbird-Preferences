@@ -16,6 +16,7 @@
   - [JavaScript](#javascript)
   - [Send Referer](#send-referer)
   - [Show Punycode](#show-punycode)
+  - [First-Party Isolation](#first-party-isolation)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
     - [Data Submission](#data-submission)
@@ -239,6 +240,16 @@ user_pref("network.IDN_show_punycode", true);
 [Internationalized Domain Name (IDN) homograph attack - wikipedia](https://en.wikipedia.org/wiki/IDN_homograph_attack)
 
 [Punycode Phishing Attacks - thehackernews.com](https://thehackernews.com/2017/04/unicode-Punycode-phishing-attack.html)
+
+
+### First-Party Isolation
+
+> The feature restricts cookies, cache and other data access to the domain level so that only the domain that dropped the cookie or file on the user system can access it.
+[[gHacks](https://www.ghacks.net/2017/11/22/how-to-enable-first-party-isolation-in-firefox/)]
+
+```js
+user_pref("privacy.firstparty.isolate", true);
+```
 
 
 ### Telemetry
