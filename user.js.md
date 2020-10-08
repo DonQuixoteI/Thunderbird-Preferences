@@ -17,6 +17,7 @@
   - [Send Referer](#send-referer)
   - [Show Punycode](#show-punycode)
   - [First-Party Isolation](#first-party-isolation)
+  - [Google Safe Browsing](#google-safe-browsing)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
     - [Data Submission](#data-submission)
@@ -249,6 +250,25 @@ user_pref("network.IDN_show_punycode", true);
 
 ```js
 user_pref("privacy.firstparty.isolate", true);
+```
+
+
+## Google Safe Browsing
+
+> Google's Safe Browsing service aims to protect against phishing websites and malicious downloads. It works by sending hashes of some visited website addresses to Google. If Google reports that the page is unsafe, the page or file will not be downloaded or displayed to protect the user against malware and data theft. Google states that it cannot derive the full website addresses from the information submitted as it only sends a partial URL fingerprint. Safe Browsing can be disabled entirely if the trade-off between privacy and security is not acceptable.
+[[GOV.UK](https://www.gov.uk/government/publications/browser-security-guidance-mozilla-firefox/browser-security-guidance-mozilla-firefox#enterprise-considerations)]
+
+```js
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
 ```
 
 
