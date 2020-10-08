@@ -15,6 +15,7 @@
   - [Cookies](#cookies)
   - [JavaScript](#javascript)
   - [Send Referer](#send-referer)
+  - [Show Punycode](#show-punycode)
   - [Telemetry](#telemetry)
     - [Health Report](#health-report)
     - [Data Submission](#data-submission)
@@ -225,6 +226,19 @@ user_pref("network.http.sendRefererHeader", 0);
 [[mozillaZine](http://kb.mozillazine.org/Network.http.sendRefererHeader), [mozilla wiki](https://wiki.mozilla.org/Security/Referrer)].
 
 [Improve online privacy by controlling referrer information - gHacks Tech News](https://www.ghacks.net/2015/01/22/improve-online-privacy-by-controlling-referrer-information/)
+
+
+### Show Punycode
+
+> Using Punycode, host names containing Unicode characters are transcoded to a subset of ASCII consisting of letters, digits, and hyphens [[Wikipedia](https://en.wikipedia.org/wiki/Punycode)].
+
+```js
+user_pref("network.IDN_show_punycode", true);
+```
+
+[Internationalized Domain Name (IDN) homograph attack - wikipedia](https://en.wikipedia.org/wiki/IDN_homograph_attack)
+
+[Punycode Phishing Attacks - thehackernews.com](https://thehackernews.com/2017/04/unicode-Punycode-phishing-attack.html)
 
 
 ### Telemetry
