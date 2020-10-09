@@ -1,6 +1,7 @@
 # Thunderbird user.js
 
 - [Setup](#setup)
+  - [Account Setup](#account-setup)
   - [Maildir](#maildir)
   - [Global Search](#global-search)
   - [Start Page](#start-page)
@@ -34,6 +35,19 @@
 
 
 ## Setup
+
+### Account Setup
+
+> All the lookup mechanisms use the email address domain as base for the lookup. For example, for the email address fred@example.com, the lookup is performed as (in this order):
+> 1. (_thunderbird-install-dir_)`/isp/example.com.xml` on the harddisk
+> 2. check for autoconfig.example.com - https://autoconfig.example.com/mail/config-v1.1.xml?emailaddress=fred@example.com
+> 3. look up of "example.com" in the ISPDB - https://autoconfig.thunderbird.net/v1.1/
+> 4. look up "MX example.com" in DNS, and for mx1.mail.hoster.com, look up "hoster.com" in the ISPDB
+> 5. try to guess (imap.example.com, smtp.example.com etc.)
+[[Autoconfiguration in Thunderbird - MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Autoconfiguration)]
+
+[Privacy-freundliche Konfiguration des Thunderbird Assistenten - Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31m.htm)
+
 
 ### Maildir
 
