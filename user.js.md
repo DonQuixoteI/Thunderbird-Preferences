@@ -3,6 +3,8 @@
 - [Setup](#setup)
   - [Maildir](#maildir)
   - [Global Search](#global-search)
+- [Start](#start)
+  - [Start Page](#start-page)
 - [Appearance](#appearance)
   - [Condensed Addresses](#condensed-addresses)
   - [Show User Agent](#show-user-agent)
@@ -65,6 +67,18 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 [[Thunderbird Help](https://support.mozilla.org/en-US/kb/global-search)]
 
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
+
+
+## Start
+
+### Start Page
+
+```js
+user_pref("mailnews.start_page.enabled", false);
+user_pref("mailnews.start_page.url", "");
+```
+
+[[Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm)] (in German)
 
 
 ## Appearance
