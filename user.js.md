@@ -3,7 +3,6 @@
 - [Setup](#setup)
   - [Maildir](#maildir)
   - [Global Search](#global-search)
-- [Start](#start)
   - [Start Page](#start-page)
 - [Appearance](#appearance)
   - [Condensed Addresses](#condensed-addresses)
@@ -68,8 +67,6 @@ user_pref("mailnews.database.global.indexer.enabled", true);
 
 [Rebuilding the Global Database - Thunderbird Help](https://support.mozilla.org/en-US/kb/rebuilding-global-database)
 
-
-## Start
 
 ### Start Page
 
