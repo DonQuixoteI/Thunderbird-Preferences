@@ -28,6 +28,8 @@
     - [Your User Agent](#your-user-agent)
 - [Extensions](#extensions)
   - [Extension Blocklist](#extension-blocklist)
+  - [Add-on Metadata Updates](#add-on-metadata-updates)
+  - [Extension Updates](#extension-updates)
 
 
 ## Setup
@@ -385,3 +387,30 @@ user_pref("extensions.blocklist.enabled", false);
 
 `false`: don't allow Mozilla to deactivate installed Add-ons.
 [Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm) (in German)
+
+
+### Add-on Metadata Updates
+
+```js
+user_pref("extensions.getAddons.cache.enabled", false);
+```
+
+`false`: don't send information on installed extensions to Mozilla once a day.
+[Mozilla Add-ons Blog](https://blog.mozilla.org/addons/how-to-opt-out-of-add-on-metadata-updates/)
+
+
+### Extension Updates
+
+By default, the extensions are checked and updated automatically. To prevent the automatic updating:
+
+```js
+user_pref("extensions.update.autoUpdateDefault", false);
+```
+
+To prevent the check for add-on updates:
+
+```js
+user_pref("extensions.update.enabled", false);
+```
+
+[Firefox Bug #701987](https://bugzilla.mozilla.org/show_bug.cgi?id=701987#c6)
