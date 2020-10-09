@@ -12,6 +12,7 @@
   - [Inline Attachments](#inline-attachments)
   - [Remote Content](#remote-content)
   - [Web Beacon](#web-beacon)
+  - [Online Storage](#online-storage)
   - [Cookies](#cookies)
   - [JavaScript](#javascript)
   - [Send Referer](#send-referer)
@@ -170,6 +171,18 @@ user_pref("mailnews.message_display.disable_remote_image", true);
 `true` by default.
 
 `Preferences` > `Privacy & Security` > `Allow remote content in messages`: `OFF`
+
+
+### Online Storage
+
+> Thunderbird allows you to upload attachments to an online storage service and then replaces the attachment in the message with a link.
+[[Thunderbird Help](https://support.thunderbird.net/kb/filelink-large-attachments)]
+
+```js
+user_pref("mail.cloud_files.enabled", false);
+```
+
+[[Thunderbird Filelink - Privacy Handbuch](https://privacy-handbuch.de/handbuch_31h.htm)] (in German)
 
 
 ### Web Beacon
