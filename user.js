@@ -12,6 +12,7 @@ user_pref("browser.safebrowsing.malware.enabled", false);
 user_pref("browser.safebrowsing.phishing.enabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("extensions.blocklist.enabled", false);
 user_pref("javascript.enabled", false);
 user_pref("general.useragent.override", "");
 user_pref("mail.cloud_files.enabled", false);

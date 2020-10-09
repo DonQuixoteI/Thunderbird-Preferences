@@ -26,6 +26,8 @@
   - [Privacy](#privacy)
     - [Your IP Address](#your-ip-address)
     - [Your User Agent](#your-user-agent)
+- [Extensions](#extensions)
+  - [Extension Blocklist](#extension-blocklist)
 
 
 ## Setup
@@ -366,3 +368,20 @@ user_pref("general.useragent.override", "");
 [User-Agent - Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31f.htm) (in German)
 
 To view the User Agent, see [how to show them](#show-user-agent).
+
+
+## Extensions
+
+### Extension Blocklist
+
+> Mozilla maintains a list of extensions that are not approved for use with Thunderbird. Thunderbird downloads this list from the Internet... _Warning_: Disabling blocklist updating is not recommended and may result in you using extensions known to be untrustworthy.
+[[Thunderbird Help](https://support.mozilla.org/en-US/kb/thunderbird-makes-unrequested-connections#w_extension-blocklist-updating)]
+
+[Add-ons Blocking Process - Firefox Extension Workshop](https://extensionworkshop.com/documentation/publish/add-ons-blocking-process/)
+
+```js
+user_pref("extensions.blocklist.enabled", false);
+```
+
+`false`: don't allow Mozilla to deactivate installed Add-ons.
+[Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm) (in German)
