@@ -5,6 +5,7 @@
   - [Maildir](#maildir)
   - [Global Search](#global-search)
   - [Start Page](#start-page)
+  - [Wrap Long Lines](#wrap-long-lines)
 - [Appearance](#appearance)
   - [Condensed Addresses](#condensed-addresses)
   - [Show User Agent](#show-user-agent)
@@ -90,6 +91,19 @@ user_pref("mailnews.start_page.url", "");
 ```
 
 [[Privacy Handbuch](https://www.privacy-handbuch.de/handbuch_31d.htm)] (in German)
+
+
+### Wrap Long Lines
+
+```js
+user_pref("mailnews.wraplength", 0);
+```
+
+Default:
+`72`
+
+`0` - wrap to window,
+`-1` - does not wrap.
 
 
 ## Appearance
