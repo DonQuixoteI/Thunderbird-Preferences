@@ -446,7 +446,7 @@ By default, the extensions are checked and updated automatically. To prevent the
 user_pref("extensions.update.autoUpdateDefault", false);
 ```
 
-To prevent the check for add-on updates:
+To prevent checking add-on updates:
 
 ```js
 user_pref("extensions.update.enabled", false);
